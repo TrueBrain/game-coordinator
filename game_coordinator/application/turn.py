@@ -34,10 +34,12 @@ class Application:
 
                 log.info(f"Stopped relay for {client.ip} <-> {server.ip} after {delta} seconds")
                 log.info(
-                    f"  Transfer from client: {client.protocol.relay_bytes} bytes, {client.protocol.relay_bytes / delta} bytes/sec"
+                    f"  Transfer from client: {client.protocol.relay_bytes} bytes, "
+                    f"{client.protocol.relay_bytes / delta} bytes/sec"
                 )
                 log.info(
-                    f"  Transfer from server: {server.protocol.relay_bytes} bytes, {server.protocol.relay_bytes / delta} bytes/sec"
+                    f"  Transfer from server: {server.protocol.relay_bytes} bytes, "
+                    f"{server.protocol.relay_bytes / delta} bytes/sec"
                 )
 
             source.protocol.relay_peer.protocol.transport.close()

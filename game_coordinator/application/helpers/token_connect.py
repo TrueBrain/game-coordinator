@@ -163,7 +163,8 @@ class TokenConnect:
 
         if self._is_connected:
             log.info(
-                f"Happy customer {self._client_source.ip} via {self.connect_state[0].value} (S: {self.connect_state[1].value}, C: {self.connect_state[2].value})"
+                f"Happy customer {self._client_source.ip} via {self.connect_state[0].value} "
+                f"(S: {self.connect_state[1].value}, C: {self.connect_state[2].value})"
             )
         else:
             # Even TURN failed, so we should tell the clients we have no way

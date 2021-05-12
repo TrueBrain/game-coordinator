@@ -1,12 +1,9 @@
-import struct
-
 from .protocol.enums import (
     PacketTCPCoordinatorType,
     PacketTCPTurnType,
     ServerGameType,
 )
 from .protocol.write import (
-    SEND_MTU,
     write_init,
     write_bytes,
     write_string,

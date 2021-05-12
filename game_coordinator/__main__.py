@@ -64,6 +64,7 @@ def main(bind, coordinator_port, stun_port, turn_port):
         pass
 
     log.info("Shutting down game_coordinator ...")
+    turn_server.close()
     stun_server.close()
     server.close()
 
